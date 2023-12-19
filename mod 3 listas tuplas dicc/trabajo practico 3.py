@@ -13,7 +13,6 @@ for i in range (x , y):
     lista.append(i)
 print(lista)
 
-
 """2) Pide un número y guarda en una lista su tabla de multiplicar hasta el 10. Por
 ejemplo, si pide el 5 la lista tendrá: 5,10,15,20,25,30,35,40,45,50"""
 
@@ -53,15 +52,22 @@ for i in range (len(tupla)):
         repetido = repetido + 1
         print (f"El numero se repite {repetido} veces") 
 
+#crea lista donde se agreguen num y diga cuantos se repiten
 
-repetido=0
-tupla = ()
+listaNum=[]
 while True:
-    tupla = input("ingrese un numero ")
-    for i in range (len(tupla)):
-        if i in tupla:
-            repetido = repetido +1
-        print(f"el numero se repite {repetido} veces")
+    num=input("ingrese un numero:")
+    if num=="":
+        break
+    else:
+        listaNum.append(int(num))
+
+def caracterRepetido(numero):
+    repetido=0
+    for i in range(len(listaNum)):
+        if listaNum[i]==numero:
+            repetido=repetido + 1
+    print(f"el numero{numero} se ha repetido{repetido}veces")
 
 
 """6) Crea una tupla con los meses del año, pedir números al usuario. Si el numero esta
@@ -99,7 +105,7 @@ diccionario), debe mostrar el teléfono y, opcionalmente, permitir modificarlo s
 es correcto. - Si el nombre no se encuentra, debe permitir ingresar el teléfono
 correspondiente. El usuario puede utilizar la cadena "*", para salir del programa"""
 
-dicc_agenda: {"maria": "87654367", "pedro": "10239876", "juan": "67543290", "ana": "98123456"}
+dicc_agenda= {"maria": "87654367", "pedro": "10239876", "juan": "67543290", "ana": "98123456"}
 nuevo_contacto = ""
 while True:
     nombre = input("Ingrese nombre: ")
@@ -111,8 +117,8 @@ while True:
         if preguntar == "si":
             print (int("ingrese nuevo numero: "))
     else:
-        print("Ese nombre no exite en la agenda...")
-        dicc_agenda[nuevo_cotacto] = {(input("ingrese nombre:")): int(input("ingrese telefono: "))}
+    print("Ese nombre no exite en la agenda...")
+    dicc_agenda[nuevo_cotacto] = {(input("ingrese nombre:")): int(input("ingrese telefono: "))}
 
 """9) Opcional: Pide números y mételos en una lista, cuando el usuario meta un 0 ya
 dejaremos de insertar. Por último, muestra los números ordenados de menor a
@@ -139,11 +145,28 @@ while num != 0:
         break
     else:
         lista_de_num.append(num)
-print lista_de_num
+for i in range (len(lista_de_num)+1):
+    print (lista_de_num)
 
 
 """11) Opcional: Codificador Morse: Desarrolle un programa en Python que permita al
 usuario escribir un mensaje y convertirlo a código Morse. La codificación Morse se
 presenta en la siguiente tabla:"""
 
+Codificador_Morse = {"a":".-","b": "-...","c":"-.-.","d":"-..","e":".","f":"..-.",
+                   "g":"--.","h":"....","i":"..","j":".---","k":"-.-","l":".-..",
+                   "m":"--","n":"-.","o":"---","p":".--.","q":"--.-","r":".-.",
+                   "s":"...","t":"-","u":"..-","v":"...-","w":".--","x":"-..-","y":"-.--",
+                   "z":"--.."," ":"  "}
 
+while True:
+    ingreso = input("¿Tiene un mensaje?: ")
+    if ingreso == "no":
+         print("no hay mensaje")
+         break
+    else:
+        ingreso=("ingrese mensaje")
+        codigo_morse = ""
+        for caracter in ingreso:
+            codigo_morse+= Codificador_Morse[caracter]
+    print(codigo_morse)

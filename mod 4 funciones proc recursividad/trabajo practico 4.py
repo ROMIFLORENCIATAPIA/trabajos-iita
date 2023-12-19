@@ -23,34 +23,45 @@ def sandwich ():
         condimento= input("cual condimento queres agregar:")
         if condimento =="salir":
             break
-         else:
+        else:
             print(f"Se agrego el condimento {condimento} a tu sandwich")
+
+pedido= "confirme si es correcto su pedido"
+if sandwich():
+    print(f"su pedido tiene {sandwich}")
+else:
+    print(f"se canceló pedido")
 
 """3) A) Remera: Escriba una función “hacer_remera()” que tome como parámetros un tamaño y el mensaje que debería ir impreso en la remera. 
 La función debe mostrar un mensaje describiendo el tamaño de la remera y el mensaje impreso en ella.
 Llame la función una vez usando argumentos por posición. Llámela una segunda vez usando argumentos por clave."""
 
-def hacer_remera(tamaño, mensaje):
-remera: input(f"ingrese un talle {tamaño} e ingrese el mensaje a imprimir{mensaje}")
-print hacer_remera(m, "hola mundo")
+def hacer_remera(talle, mensaje):
+    for i in range:
+        talle=input("ingrese talle:")
+        mensaje= input("ingrese un mensaje:")
+
+remera= hacer_remera("m", "hola")
+
+remera= hacer_remera()
 
 
 """B) Remeras Grandes: Modifique la “funcion hacer_remera()” para que el tamaño por defecto sea ‘L’ y el mensaje, ‘Me gusta Python’. 
 Haga un par de remeras, la primera con los valores por defecto, y la segunda con valores diferentes."""
 
 def hacer_remera(tamaño, mensaje):
-    if hacer remera = (L, "me gusta Python"):
-        print hacer_remera()
+    if hacer_remera == ("L", "me gusta Python"):
+        print (hacer_remera())
     else:
         remera: input(f"ingrese un talle {tamaño} e ingrese el mensaje a imprimir{mensaje}")
 
-print hacer_remera(m, "hola mundo")
+print (hacer_remera())
 
 """4) Serie de Fibonacci: Escriba una función fibonacci(n) que devuelva los n primeros numeros de la serie de Fibonacci.
 En esta serie, los primeros dos números son 0 y 1, y cada sucesivo número es la suma de los dos números inmediatamente anteriores
 (ejemplo: 0,1,1,2,3,5,8,13,21,34,55,…)."""
 
-num_fibonacci[0, 1]
+num_fibonacci= [0, 1]
 def fibonacci():
     for i in num_fibonacci:
         suma == suma.num_fibonacci
@@ -80,7 +91,7 @@ para que la calculadora sea capaz de devolver el resultado solamente de una oper
 Por ejemplo, si el usuario ingresa dos numeros x, y, y luego ingresa ‘1’, la calculadora devuelve la suma entre los numeros x,y; 
 si ingresa ‘2’, devuelve la resta, etc."""
 
-inport match
+inport math
 numero1 = float (input( "introduce el primer número: "))
 numero2 = float (input( "introduce el segundo número: "))
 
@@ -120,12 +131,14 @@ Esto significa que en el calendario gregoriano los años 2000 y 2400 son bisiest
 #a) Escriba una función que tome un año y diga si es bisiesto o no.
 
 def a_bisiesto():
-    if (a_bisiesto==(%4==0) or (% 400 and %100 == 0))
-    return True
+    if (a_bisiesto % 4== 0) or (a_bisiesto % 400 and 100 == 0):
+        return True
+    else:
+        print (f"el año {a_bisiesto} no es bisiesto")
 
 solicito= int(input("ingrese un año"))
-ingreso= a_bisiesto(solicito)
-print:(f"El año {solicito} es bisiesto.")
+a_bisiesto(solicito):
+print (f"El año {solicito} es bisiesto.")
 
 
 #b) Modifique su programa para que devuelva todos los años bisiestos entre el año actual y el año pasado a la función como parámetro 
